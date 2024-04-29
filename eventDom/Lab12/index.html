@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Lab12</title>
+    <style>
+        .green{
+            color: green;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button>Add</button>
+    <div>
+
+
+    </div>
+
+    <script>
+        const add = document.querySelector("button")
+        const div = document.querySelector("div")
+        let span = document.querySelectorAll("span")
+        let edit = document.querySelectorAll("#edit")
+        let del = document.querySelectorAll("#del")
+        const delDiv = document.querySelectorAll("div div")
+        let count = 0
+
+        add.addEventListener("click", function () {
+            div.insertAdjacentHTML("beforeend", "<div><span>Task </span><button id='edit'>Edit</button><button id='del'>Del</button></div>")
+            edit = document.querySelectorAll("#edit")
+            del = document.querySelectorAll("#del")
+            span = document.querySelectorAll("span")[count]
+            count ++;
+            span.append(count)
+        })
+
+        
+        span.addEventListener("click", function () {
+            span.classList.add('green')
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

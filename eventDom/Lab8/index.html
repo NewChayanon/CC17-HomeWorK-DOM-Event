@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Lab8</title>
+</head>
+
+<body>
+    <button>Hide</button>
+    <p>Lorem ipsum dolor sit.</p>
+    <script>
+        // Lab 8
+        // จงสร้าง Button มีข้อความว่า “Hide”
+        // เมื่อผู้ใช้ click button ให้ซ่อนข้อความและเปลี่ยนข้อความบน Button เป็น 
+        // “Show” เมื่อ click button อีกครั้งให้แสดงข้อความและเปลี่ยนข้อความบน 
+        // Button เป็น Hide
+
+        const button = document.querySelector('button')
+        const p = document.querySelector('p')
+
+        button.addEventListener('click', function () {
+            if(button.textContent === 'Hide'){
+                button.textContent = 'Show'
+                p.setAttribute('hidden', true)
+            }
+            else if(button.textContent === 'Show'){
+                button.textContent = 'Hide'
+                p.removeAttribute('hidden')
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

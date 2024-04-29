@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Lab1</title>
+</head>
+
+<body>
+    <button>Click</button>
+    <script>
+        // Lab 1
+        // คำสั่งใดทำงานได้ เมื่อ button คือ element button 
+
+        const button = document.querySelector('button')
+        button.addEventListener('click', () => alert('1'));  // (1) ทำงานได้โดย alert '1' ออกมา
+        button.removeEventListener('click', () => alert('1')); // (2) ทำงานได้โดย ลบ alert '1' ออก 
+        button.onclick = () => alert(2); // (3) ทำงานได้โดยเมื่อ button ถูก คลิกจะ alert '2 ออกมา'
+
+    </script>
+</body>
+
+</html>

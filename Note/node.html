@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+</head>
+<body>
+    <div>Before Root</div>
+
+    <div id="root">
+
+        <div>Initial Root Content</div>
+
+    </div>
+
+    <div>After Root</div>
+
+    <footer>
+        <div>
+            <ul>
+                <li class="list">
+                    Home
+                    <!-- <a href=""></a> -->
+                </li>
+                <li class="">
+                    About
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const newH1 = document.createElement('h1')
+        newH1.textContent = 'Hello world'
+
+        const root = document.getElementById('root')
+        // root.append(newH1)
+        // root.prepend(newH1)
+        // root.after(newH1)
+        // root.before(newH1)
+
+        // root.insertAdjacentHTML("beforebegin",newH1)
+        // root.insertAdjacentHTML("afterbegin",newH1)
+        // root.insertAdjacentHTML("beforeend",newH1)
+        // root.insertAdjacentHTML("afterend",newH1)
+
+        //cloneNode
+        const footer = document.querySelector('footer')
+        const deepCloned = footer.cloneNode(true)
+        const shallowCloned = footer.cloneNode(false)
+        
+        //class
+        const li = document.querySelector('li')
+        li.style.listStyleType = 'none'
+        li.className
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <button id="decrement">-</button>
+    <span>1</span>
+    <button id="increment">+</button>
+
+    <script>
+        const decrement = document.getElementById('decrement')
+        const increment = document.getElementById('increment')
+        const count = document.querySelector('span')
+        decrement.addEventListener('click',function(){
+            const currentCount = +count.textContent
+            if(currentCount === 1){
+                return currentCount = '2'
+            }
+            const newCount = currentCount - 1
+            count.textContent = newCount
+        })
+        increment.addEventListener('click',function(){
+            const currentCount = +count.textContent //เอาค่าปัจจุบันมาเก็บไว้ก่อน
+            const newCount = currentCount  + 1
+            count.textContent = newCount
+        })
+    </script>
+</body>
+</html>
